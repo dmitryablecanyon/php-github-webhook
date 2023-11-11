@@ -71,7 +71,7 @@ class Handler
 
     public function validate()
     {
-        $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE'];
+        $signature = @$_SERVER['HTTP_X_HUB_SIGNATURE_256'];
         $event = @$_SERVER['HTTP_X_GITHUB_EVENT'];
         $delivery = @$_SERVER['HTTP_X_GITHUB_DELIVERY'];
 

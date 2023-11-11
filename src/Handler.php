@@ -95,7 +95,7 @@ class Handler
     {
         list ($algo, $gitHubSignature) = explode("=", $gitHubSignatureHeader);
 
-        if ($algo !== 'sha1') {
+        if ($algo !== 'sha256') {
             // see https://developer.github.com/webhooks/securing/
             return false;
         }

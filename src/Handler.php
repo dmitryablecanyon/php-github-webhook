@@ -84,7 +84,7 @@ class Handler
             return false;
         }
 
-        $this->data = json_decode($payload,true);
+        $this->data = json_decode($_POST['payload'] ?? '{}',true);
         $this->event = $event;
         $this->delivery = $delivery;
         return true;

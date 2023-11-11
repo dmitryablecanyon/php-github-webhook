@@ -65,8 +65,7 @@ class Handler
             return false;
         }
 
-        exec("git -C {$this->gitDir} pull -f {$this->remote} 2>&1", $this->gitOutput, $this->gitExitCode);
-        return $this->gitExitCode == 0;
+        return true;
     }
 
     public function validate()

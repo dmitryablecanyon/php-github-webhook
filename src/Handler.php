@@ -81,11 +81,6 @@ class Handler
 
         $payload = file_get_contents('php://input');
 
-        // Check if the payload is json or urlencoded.
-        if (strpos($payload, 'payload=') === 0) {
-            $payload = substr(urldecode($payload), 8);
-        }
-
         if (!$this->validateSignature($signature, $payload)) {
             return false;
         }
